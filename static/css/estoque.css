@@ -1,0 +1,74 @@
+body {
+    background-color: #2b0281;
+     /*background-image: url('/static/img/LOGOnova (1).png' ) */
+    background-position: center;
+    font-family: "Kufam", sans-serif;
+    
+}
+
+
+.navbar  {
+    background-color: #190349;
+   
+}
+
+.nav-link:hover  {
+    background-color: #68416E;
+    border-radius: 5px;
+}
+
+#boxProdutos {
+    margin-top: 100px;
+
+}
+
+.card {
+    margin-bottom: 20px;
+    border-color: #000000;
+    border-width: 10px;
+    height: 460px;
+}
+
+.card:hover {
+    width: 20rem;
+    background-color: rgb(211, 196, 212);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

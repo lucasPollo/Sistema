@@ -1,0 +1,32 @@
+body {
+    background-color: #2b0281;
+    /*background-image: url('/static/img/LOGOnova (1).png' ) */
+    background-position: center;
+    color: white;
+    font-family: "Kufam", sans-serif;
+
+    
+}
+
+.card {
+    background-color: #190349;
+    color: aliceblue;
+    margin-top: 250px;
+    box-shadow: black;
+    
+    
+}
+
+.card:hover {
+    background-color: #68416E;
+}
+
+.navbar  {
+    background-color: #190349;
+   
+}
+
+.nav-link:hover  {
+    background-color: #68416E;
+    border-radius: 5px;
+}

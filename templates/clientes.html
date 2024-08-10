@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{url_for('static', filename='css/clientes.css')}}">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="/static/css/estoque.css">
+  <link rel="shortcut icon" type="image/png" href="\static\img\faviconZ.png"/>
+  <style> @import url('https://fonts.googleapis.com/css2?family=Kufam:ital,wght@0,400..900;1,400..900&display=swap'); </style>
+  <title>ZENFAY|Clientes</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand text-light" href="#">ZENFAY</a>
+     
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+        aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link text-light" aria-current="page" href="{{url_for('indexPage')}}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="{{url_for('estoquePage')}}">Estoque</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-light" href="{{url_for('cadastroPage')}}">Cadastrar</a>
+          </li>
+        </ul>
+        <span class="navbar-text">
+          <a href="{{url_for('cadastroPage')}}"><button type="button" class="btn btn-success"
+              style="width: 10rem;">cadastre-se</button></a>
+        </span>
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="boxTxt">
+    <h1 class="text-center text-light">Clientes Cadastrados | {{qtdClientes}} </h1>
+  </div>
+  <table class="table text-center">
+    <thead>
+      <tr>
+        <th scope="col">ID:</th>
+        <th scope="col">NOME:</th>
+        <th scope="col">EMAIL:</th>
+        <th scope="col">CPF:</th>
+        <th scope="col">ENDEREÇO:</th>
+        <th scope="col">ESTADO:</th>
+        <th scope="col">AÇÕES:</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        {% for cliente in clientes %}
+        <th scope="row">{{cliente.id}}</th>
+        <td>{{cliente.nome}}</td>
+        <td>{{cliente.email}}</td>
+        <td>{{cliente.cpf}}</td>
+        <td>{{cliente.endereco}}</td>
+        <td>{{cliente.estado}}</td>
+        <td><button id="botaO" type="button" class="btn btn-danger"><a
+          class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+          href="/deletar/{{cliente.id}}">Deletar</a></button><button id="botao" type="button" class="btn btn-primary"><a
+            class="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+            href="/editar/{{cliente.id}}">Editar</a></button></td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  
+</body>
+
+</html>

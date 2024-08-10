@@ -1,0 +1,80 @@
+body {
+      /*background-image: url('/static/img/LOGOnova (1).png' ) */
+    background-position: center;
+    background-color: #2b0281;
+    font-family: "Kufam", sans-serif;
+    
+}
+
+
+.txt_main {
+    background-color: rgb(74, 180, 157);
+}
+
+
+
+.navbar  {
+    background-color: #190349;
+   
+}
+
+.nav-link:hover  {
+    background-color: #68416E;
+    border-radius: 5px;
+}
+
+
+#box_main {
+    background-color: bisque;
+    width: 800px;
+   padding: 20px;
+   margin-top: 25px;
+}
+
+
+
+#boxCliente {
+    background-color:#190349;
+    height: 500px;
+    margin-top: 150px;
+    width: 650px;
+    border-radius: 15px;
+    
+}
+.h1Main {
+    background-color: rgb(72, 8, 175);
+    margin-top: 0px;
+    color: rgb(255, 255, 255);
+    height: 50px;
+}
+
+.inpt {
+    height: 40px;
+    width: 350px;
+    font-size: 20px;
+    margin-bottom: 20px;
+    margin-top: 5px;
+    border-radius: 5px;
+}
+
+#btnCadastro {
+    margin-top: 20px;
+}
+
+.boxDadosCliente {
+    display: grid;
+    align-items: normal;
+    margin-top: 30px;
+    margin-left: 50px;
+}
+
+
+#box_main { 
+    margin-top: 150px; 
+    display: block; 
+    background-color: #21065a;
+} 
+.box_form {
+     display: grid; 
+    } 
+
